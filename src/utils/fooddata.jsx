@@ -1,4 +1,4 @@
-const fooddata=            [{
+const fooddata=            [{                   "id":"3223",
                                                 "imageId": "PC_Mweb/Pizza.png",
                                                 "action": {
                                                     "link": "https://www.swiggy.com/collections/83631?collection_id=83631&search_context=pizza&tags=layout_CCS_Pizza&type=rcv2",
