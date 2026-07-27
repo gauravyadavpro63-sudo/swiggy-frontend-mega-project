@@ -1,9 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom/client";
-import Header from "./components/header"
-import FoodOption from "./components/foodoption"
-import Restaurants from "./components/restaurants";
-import { NorthIndian } from "./components/northindian";
+import Home from "./components/home"
+import RestaurantPage from "./components/restaurantpage";
+import {BrowserRouter,Routes,Route,Link} from "react-router"
 
 
 
@@ -13,10 +12,14 @@ function Main(){
   
    return(
     <> 
-     <Header/>
-     <FoodOption/>
-     <Restaurants/>
-     <NorthIndian/>
+    <BrowserRouter>
+    <Routes>
+      |<Route path="/" element={<Home/>}></Route>
+      <Route path="/restaurant" element={<RestaurantPage/>}></Route>
+    </Routes>
+    </BrowserRouter>
+    
+
   </>
   )
 }
