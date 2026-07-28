@@ -15,9 +15,10 @@ function RestaurantPage(){
     fetchdata();
     },[])
 
-    if(restdata==0){
-        <ShimmerEffect/>
-    }
+    if(restdata.length==0){
+        return( <ShimmerEffect/>
+        )
+        }
    
     return(
         <>

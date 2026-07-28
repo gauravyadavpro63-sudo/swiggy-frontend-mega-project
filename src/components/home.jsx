@@ -12,7 +12,6 @@ import ShimmerEffect from "./shimmereffect"
         <Header/>
         <FoodOption/>
         <Restaurants/>
-        <ShimmerEffect/>
            
         </>
     )
