@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import Restcard from "./restcard";
 import ShimmerEffect from "./shimmereffect";
+import {ChevronDown,ChevronUp} from "lucide-react";
 
 
 function RestaurantPage(){
     const [restdata,SetrestData]=useState([])
+    const [curtain,UseCurtain]=useState(true);
+    const [curtain2,UseCurtain2]=useState(true);
     useEffect(()=>{
 
          async function fetchdata(){
@@ -19,21 +22,50 @@ function RestaurantPage(){
         return( <ShimmerEffect/>
         )
         }
-   
+
     return(
         <>
-        <h1 className="m-17 pl-8 text-3xl font-bold">Restaurant with online delivery in Lucknow</h1>
-        <div className="flex flex-wrap justify-center gap-8 ">
+        <div className="flex justify-between m-17 container max-w-[80%] mx-auto  ">
+            <h1 className=" text-3xl font-bold">Recommended</h1>
+            <button onClick={()=>UseCurtain(!curtain)}>{curtain?<ChevronUp size={24}/>:<ChevronDown size={24}/>}</button>
+        </div>
+       {curtain&&(
+        <div className="container max-w-[80%] mx-auto">
         {
-            restdata?.map((value)=>{
+            restdata?.slice(0,15).map((value)=>{
                 return(
                 <Restcard key={value.id} value={value}/>
                 )
             })
         }
+        </div>)}
 
+
+
+
+
+
+
+
+
+
+     <div className="flex justify-between m-17 container max-w-[80%] mx-auto  ">
+            <h1 className=" text-3xl font-bold">More to Discover</h1>
+            <button onClick={()=>UseCurtain2(!curtain2)}>{curtain2?<ChevronUp size={24}/>:<ChevronDown size={24}/>}</button>
         </div>
+       {curtain2&&(
+        <div className="container max-w-[80%] mx-auto">
+        {
+            restdata?.slice(14,30).map((value)=>{
+                return(
+                <Restcard key={value.id} value={value}/>
+                )
+            })
+        }
+        </div>)}
         </>
     )
 }
+
+
 export default RestaurantPage;
