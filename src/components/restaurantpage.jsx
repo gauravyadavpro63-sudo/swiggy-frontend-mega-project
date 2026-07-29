@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Restcard from "./restcard";
 import ShimmerEffect from "./shimmereffect";
 import {ChevronDown,ChevronUp} from "lucide-react";
-
+import {Link} from "react-router"
 
 function RestaurantPage(){
     const [restdata,SetrestData]=useState([])
@@ -37,8 +37,11 @@ function RestaurantPage(){
 
     return(
         <>
-         <div className=" text-m ml-36 mt-10" >sort by prize: <button onClick={()=>prize==="low"?Setprize(null):Setprize("low")} className={`mr-4 border rounded-2xl p-1 ${prize==="low"?"bg-green-300":"bg-gray-200"}`}>below ₹300</button>  
+        <div className=" mt-10 container max-w-[80%] mx-auto flex justify-between">
+         <Link to="/restaurant/menu/search"><div><button className="border rounded-md p-1 bg-gray-200">Search</button></div></Link>
+         <div className=" text-m " >sort by prize: <button onClick={()=>prize==="low"?Setprize(null):Setprize("low")} className={`mr-4 border rounded-2xl p-1 ${prize==="low"?"bg-green-300":"bg-gray-200"}`}>below ₹300</button>  
           <button className={`border rounded-2xl  ${prize==="high"?"bg-red-300":"bg-gray-200"} p-1`} onClick={()=>prize==="high"?Setprize(null):Setprize("high")}>above ₹300</button>
+        </div>
         </div>
         <div className="flex justify-between m-17 container max-w-[80%] mx-auto  ">
             

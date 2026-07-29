@@ -5,6 +5,7 @@ import RestaurantPage from "./components/restaurantpage";
 import {BrowserRouter,Routes,Route,Link} from "react-router"
 import RestaurantId from "./components/restaurantid";
 import RestaurantNames from "./components/restaurantnames";
+import  Search  from "./components/search";
 
 
 
@@ -18,6 +19,7 @@ function Main(){
       |<Route path="/" element={<Home/>}></Route>
       <Route path="/restaurant" element={<RestaurantNames/>}></Route>
       <Route path="/restaurant/menu" element={<RestaurantPage/>}></Route>
+      <Route path="/restaurant/menu/search" element=  {<Search/>}></Route>
       <Route path="/restaurant/menu/:id" element={<RestaurantId/>}></Route>
     </Routes>
     </BrowserRouter>
