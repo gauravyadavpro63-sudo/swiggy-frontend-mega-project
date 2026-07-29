@@ -8,6 +8,7 @@ function RestaurantPage(){
     const [restdata,SetrestData]=useState([])
     const [curtain,UseCurtain]=useState(true);
     const [curtain2,UseCurtain2]=useState(true);
+    const [prize,Setprize]=useState(null);
     useEffect(()=>{
 
          async function fetchdata(){
@@ -23,16 +24,32 @@ function RestaurantPage(){
         )
         }
 
+
+        const filterdata=restdata.filter((value)=>{
+            if(prize==="low"){
+               return value.caloriesPerServing<=300;
+            }
+            if(prize==="high"){
+                return value.caloriesPerServing>300;
+            }
+            return true;
+        })
+
     return(
         <>
+         <div className=" text-m ml-36 mt-10" >sort by prize: <button onClick={()=>prize==="low"?Setprize(null):Setprize("low")} className={`mr-4 border rounded-2xl p-1 ${prize==="low"?"bg-green-300":"bg-gray-200"}`}>below ₹300</button>  
+          <button className={`border rounded-2xl  ${prize==="high"?"bg-red-300":"bg-gray-200"} p-1`} onClick={()=>prize==="high"?Setprize(null):Setprize("high")}>above ₹300</button>
+        </div>
         <div className="flex justify-between m-17 container max-w-[80%] mx-auto  ">
+            
             <h1 className=" text-3xl font-bold">Recommended</h1>
             <button onClick={()=>UseCurtain(!curtain)}>{curtain?<ChevronUp size={24}/>:<ChevronDown size={24}/>}</button>
         </div>
+       
        {curtain&&(
         <div className="container max-w-[80%] mx-auto">
         {
-            restdata?.slice(0,15).map((value)=>{
+            filterdata?.slice(0,15).map((value)=>{
                 return(
                 <Restcard key={value.id} value={value}/>
                 )
@@ -56,7 +73,7 @@ function RestaurantPage(){
        {curtain2&&(
         <div className="container max-w-[80%] mx-auto">
         {
-            restdata?.slice(14,30).map((value)=>{
+            filterdata?.slice(15,30).map((value)=>{
                 return(
                 <Restcard key={value.id} value={value}/>
                 )
