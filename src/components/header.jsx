@@ -1,7 +1,15 @@
 import { Link } from "react-router";
+import Sidebar from "./sidebar";
+import { useEffect, useState } from "react";
 
 function Header(){
+     
+    const [open,Setopen]=useState(false);
+    useEffect(()=>{
+       document.body.style.overflow=open?"hidden":"auto";
+    },[open])
     return(
+        
             <header className="bg-[#ff5200]">
         <div className="flex justify-between container mx-auto py-8 max-w-[90%]">
          <img className="h-14 w-41 "src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png" alt="" />
@@ -9,7 +17,7 @@ function Header(){
           <a href="https://www.swiggy.com/corporate/">Swiggy corporate</a>
           <a href="https://partner.swiggy.com/login#/swiggy">Partner with us</a>
           <a className="border border-white rounded-2xl px-3 py-3" href="">Get the app</a>
-          <a className="border border-black rounded-2xl px-3 py-3 bg-black" href="">Sign in</a>
+          <button onClick={()=>Setopen(true)} className="border border-black rounded-2xl px-3 py-3 bg-black" >Sign in</button>
           </div>    
         </div>
 
@@ -30,8 +38,9 @@ function Header(){
             <img className="object-cover h-80 w-80"src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/23/b6d9b7ab-91c7-4f72-9bf2-fcd4ceec3537_DO3BU.png" alt="" />
         </div>
 
-
-        </header>
+         <Sidebar open={open} setopen={Setopen}/>
+        </header >
+        
     )
 }
 
