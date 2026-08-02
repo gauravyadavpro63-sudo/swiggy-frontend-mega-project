@@ -25,8 +25,22 @@ function RestaurantId(){
        <div className="text-gray-400">{food.cuisine}</div>
        <div className="mt-10"><span className="font-semibold">Ingredients:</span>{food?.ingredients?.map((value)=>value+",")}</div>
        <div className="my-10" ><span className="font-semibold">Instructions:</span>{food.instructions}</div>
+
+
+       <div>
+        <h1 className="font-bold text-2xl">Disclamer</h1>
+        <span>
+          <ul className="list-disc">
+            <li>All prices are set directly by the restaurant.</li>
+            <li>All nutritional information is indicative, values are per serve as shared by the restaurant and may vary depending on the ingredients and portion size</li>
+            <li>An average active adult requires 2,000 kcal energy per day, however, calorie needs may vary.</li>
+          </ul>
+        </span>
        </div>
- 
+                <div className=" my-10"><img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/seo/App_download_banner.png" alt="img" /></div>
+
+       </div>
+       
         </>
     )
 }
