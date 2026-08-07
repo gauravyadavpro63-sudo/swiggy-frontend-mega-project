@@ -39,7 +39,7 @@ function RestaurantPage(){
         <>
         <div className=" mt-5 container max-w-[80%] mx-auto flex justify-between">
          <Link to="/restaurant/menu/search"><div><button className="border rounded-md p-1 bg-gray-200">Search</button></div></Link>
-         <div className=" text-m " >sort by prize: <button onClick={()=>prize==="low"?Setprize(null):Setprize("low")} className={`mr-4 border rounded-2xl p-1 ${prize==="low"?"bg-green-300":"bg-gray-200"}`}>below ₹300</button>  
+         <div className=" md:text-m hidden md:block" >sort by prize: <button onClick={()=>prize==="low"?Setprize(null):Setprize("low")} className={`mr-4 border rounded-2xl p-1 ${prize==="low"?"bg-green-300":"bg-gray-200"}`}>below ₹300</button>  
           <button className={`border rounded-2xl  ${prize==="high"?"bg-red-300":"bg-gray-200"} p-1`} onClick={()=>prize==="high"?Setprize(null):Setprize("high")}>above ₹300</button>
         </div>
         </div>

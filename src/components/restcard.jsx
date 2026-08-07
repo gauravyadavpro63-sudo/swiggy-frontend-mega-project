@@ -42,7 +42,7 @@ function Restcard({value}){
             <Star className="w-6 h-6 text-green-500 fill-green-500" />
         <span className="font-bold">{value.rating} </span></div>
         <div className="text-gray-400 text-m">{value.cuisine}</div>  
-        <div className="max-w-[90%]">{value.instructions}</div>
+        <div className="max-w-[90%] hidden md:block">{value.instructions}</div>
        </Link>   
 </div>
 
