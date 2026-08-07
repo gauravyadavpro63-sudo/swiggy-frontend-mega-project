@@ -1,16 +1,30 @@
-# React + Vite
+# Swiggy frontend clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Built a fully responsive, multi-page food delivery frontend from scratch using React.js.
 
-Currently, two official plugins are available:
+## Features
+- Implemented multi-page navigation with React Router and dynamic restaurant pages using useParams.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Integrated REST APIs and dummy data to fetch restaurant and food information; implemented search and sorting functionality using API calls, useState, and useEffect
 
-## React Compiler
+- Developed cart functionality using Redux for centralized state management, enabling reliable tracking and updating of added food items.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-Created a sign-in UI and designed responsive layouts for desktop and mobile devices.
 
-## Expanding the ESLint configuration
+## Tech Stack
+- React
+- JavaScript
+- Tailwind CSS HTML
+- React Router
+- API
+-Redux Store
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## What I learned
+...
+
+## Live Demo
+## 🚀 Live Demo
+
+[View Live Demo](swiggy-frontend-mega-project.netlify.app)
+
