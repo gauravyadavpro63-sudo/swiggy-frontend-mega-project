@@ -26,5 +26,5 @@ Built a fully responsive, multi-page food delivery frontend from scratch using R
 ## Live Demo
 ## 🚀 Live Demo
 
-[View Live Demo](swiggy-frontend-mega-project.netlify.app)
+[View Live Demo](https://swiggy-frontend-mega-project.netlify.app/)
 
