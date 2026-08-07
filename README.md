@@ -9,7 +9,7 @@ Built a fully responsive, multi-page food delivery frontend from scratch using R
 
 - Developed cart functionality using Redux for centralized state management, enabling reliable tracking and updating of added food items.
 
--Created a sign-in UI and designed responsive layouts for desktop and mobile devices.
+- Created a sign-in UI and designed responsive layouts for desktop and mobile devices.
 
 ## Tech Stack
 - React
@@ -20,8 +20,7 @@ Built a fully responsive, multi-page food delivery frontend from scratch using R
 -Redux Store
 
 
-## What I learned
-...
+
 
 ## Live Demo
 ## 🚀 Live Demo
